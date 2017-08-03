@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Squawk Code Generator</title>
+  <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <form class="" action="index.html" method="post">
+          <input type="text" name="callsign" value="" autocomplete="off">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <table>
+          <thead>
+            <tr>
+              <th>Callsign</th>
+              <th>Squawk Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for key, value in assigned_squawk.items() %}
+            <tr>
+              <td data-label="Callsign"> {{ key }} </td>
+              {% if online[key] == value %}
+              <td data-label="Squawk Code" style="color:green;"> {{ value.zfill(4) }} </td>
+              {% else %}
+              <td data-label="Squawk Code"> {{ value.zfill(4) }} </td>
+              {% endif %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
