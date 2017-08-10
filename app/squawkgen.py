@@ -1,5 +1,5 @@
 import requests
-from squawklist import squawklist
+from app.squawklist import squawklist
 
 url = 'https://api.ivao.aero/getdata/whazzup/whazzup.txt'
 

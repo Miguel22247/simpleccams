@@ -6,8 +6,8 @@ A simple squawk code generator for IVAO that uses CCAMS codes.
 ## Install
 1. Clone the repo
 2. `pip install -r requirements.txt`
-3. Run `python app.py`
-4. Go to [http://127.0.0.1:5000/index.html](http://127.0.0.1:5000/index.html)
+3. Run `python run.py`
+4. Go to [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
 ## Run
 Enter the callsign of the aircraft you want to assign a squawk to.

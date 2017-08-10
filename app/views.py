@@ -1,9 +1,10 @@
-from flask import Flask, request, redirect, url_for
+from flask import request, redirect, url_for
 from flask import render_template
-from squawkgen import *
 
-app = Flask(__name__)
+from app import app
+from app.squawkgen import parse_whazzup, download_whazzup, assign_squawk, assigned_squawk
 
+@app.route('/', methods=['GET','POST'])
 @app.route('/index.html', methods=['GET','POST'])
 def index():
     online = parse_whazzup(download_whazzup())
@@ -14,6 +15,3 @@ def index():
     return render_template('index.html',
                            assigned_squawk=assigned_squawk,
                            online=online)
-
-if __name__ == '__main__':
-    app.run()
