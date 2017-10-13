@@ -1,4 +1,6 @@
-squawklist = (
+from random import shuffle
+
+squawklist = [
 	'2240',
 	'3237',
 	'2031',
@@ -1240,4 +1242,6 @@ squawklist = (
 	'3443',
 	'7746',
 	'5401',
-	'2274')
+	'2274']
+
+shuffle(squawklist)
