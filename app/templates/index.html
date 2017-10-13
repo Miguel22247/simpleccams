@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Squawk Code Generator</title>
-  <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" async></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
+    <div class="row" style="position:sticky;top:0;background:white;">
+      <div class="col s12">
         <form class="" action="index.html" method="post">
-          <input type="text" name="callsign" value="" autocomplete="off">
-          <input type="submit" value="Submit">
+          <input type="text" name="callsign" placeholder="Enter Callsign" value="" autocomplete="off">
         </form>
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12">
-        <table>
+      <div class="col s12">
+        <table class="bordered">
           <thead>
             <tr>
               <th>Callsign</th>
@@ -43,4 +44,5 @@
     </div>
   </div>
 </body>
+
 </html>
